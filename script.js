@@ -1,20 +1,20 @@
 const { createApp } = Vue;
+const element = document.getElementById('email-div');
 
 createApp({
     data() {
         return {
             apiUrl: 'https://flynn.boolean.careers/exercises/api/random/mail',
-            randomMail1: '',
-            randomMail2: '',
-            randomMail3: '',
-            randomMail4: '',
-            randomMail5: '',
-            randomMail6: '',
-            randomMail7: '',
-            randomMail8: '',
-            randomMail9: '',
-            randomMail10: '',
-
+            randomEmail1: '',
+            randomEmail2: '',
+            randomEmail3: '',
+            randomEmail4: '',
+            randomEmail5: '',
+            randomEmail6: '',
+            randomEmail7: '',
+            randomEmail8: '',
+            randomEmail9: '',
+            randomEmail10: '',
         }
     },
 
@@ -22,61 +22,55 @@ createApp({
         getRandomEmail() {
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail1 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail1 = response.data.response;
                 });
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail2 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail2 = response.data.response;
                 });
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail3 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail3 = response.data.response;
                 });
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail4 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail4 = response.data.response;
                 });
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail5 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail5 = response.data.response;
                 });
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail6 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail6 = response.data.response;
                 });
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail7 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail7 = response.data.response;
                 });
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail8 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail8 = response.data.response;
                 });
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail9 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail9 = response.data.response;
                 });
             axios.get(this.apiUrl)
                 .then((response) => {
-                    this.randomMail10 = response.data.response;
-                    console.log(response.data.response);
+                    this.randomEmail10 = response.data.response;
                 });
-        },
+        }
     },
 
+    waitForEmailGen() {
+        setTimeout(() => {
+            element.classList.remove('d-none');
+        }, 2000);
+    },
 
     mounted() {
         this.getRandomEmail();
     },
 
 }).mount('#app');
-
