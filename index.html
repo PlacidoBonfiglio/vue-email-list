@@ -21,39 +21,11 @@
         </header>
 
         <main>
-            <div class=" container text-center" id="email-div">
-                <ul class="text-white">
-                    <li>
-                        <p>{{randomEmail1}}</p>
+            <div class=" container text-center">
+                <ul class="text-white" v-if="EmailGenComplete">
+                    <li v-for="email in randomEmails">
+                        <p>{{email}}</p>
                     </li>
-                    <li>
-                        <p>{{randomEmail2}}</p>
-                    </li>
-                    <li>
-                        <p>{{randomEmail3}}</p>
-                    </li>
-                    <li>
-                        <p>{{randomEmail4}}</p>
-                    </li>
-                    <li>
-                        <p>{{randomEmail5}}</p>
-                    </li>
-                    <li>
-                        <p>{{randomEmail6}}</p>
-                    </li>
-                    <li>
-                        <p>{{randomEmail7}}</p>
-                    </li>
-                    <li>
-                        <p>{{randomEmail8}}</p>
-                    </li>
-                    <li>
-                        <p>{{randomEmail9}}</p>
-                    </li>
-                    <li>
-                        <p>{{randomEmail10}}</p>
-                    </li>
-
                 </ul>
             </div>
         </main>
